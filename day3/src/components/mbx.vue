@@ -1,8 +1,8 @@
 <template>
     <div>
-        <el-card class="box-card">
-            <i :class="add?'el-icon-s-unfold':'el-icon-s-fold'" @click="dj"></i>
-            <el-breadcrumb separator="/">
+        <el-card class="box-card"  >
+            <i :class="add?'el-icon-s-unfold':'el-icon-s-fold'" @click="dj" class="a"></i>
+            <el-breadcrumb separator="/" class="a">
                 <el-breadcrumb-item :to="{ path: '' }">{{title.ej}}</el-breadcrumb-item>
                 <el-breadcrumb-item>{{title.title}}</el-breadcrumb-item>
                
@@ -37,7 +37,10 @@ export default {
 }
 </script>
 <style lang="scss">
-.el-card__body {
-    display: flex;
+.a {
+    // display: flex;
+    float: left;
+    margin-left: 10px
+    
 }
 </style>
