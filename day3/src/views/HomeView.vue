@@ -39,6 +39,7 @@ export default {
       axios.post('lejuAdmin/index/login',{username: this.username,password: this.password}).then(res => {
         console.log(res);
         if(res.data.code==20000){
+         sessionStorage.setItem('token',res.data.data.token)
           this.$message({
           message: '恭喜你，登陆成功',
           type: 'success'
