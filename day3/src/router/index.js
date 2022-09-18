@@ -25,7 +25,7 @@ const routes = [
       name: 'zy',
       
       meta: {
-        title: '主页'
+        ej: '主页'
       },
       // route level code-splitting
       // this generates a separate chunk (about.[hash].js) for this route

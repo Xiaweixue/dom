@@ -3,10 +3,8 @@
         <el-card class="box-card">
             <i :class="item?'el-icon-s-unfold':'el-icon-s-fold'" @click="dj"></i>
             <el-breadcrumb separator="/">
-                <el-breadcrumb-item :to="{ path: '/zy' }">{{title.ej}}</el-breadcrumb-item>
-               
-                
-                <el-breadcrumb-item>{{title.title}}</el-breadcrumb-item>
+                <el-breadcrumb-item>{{title.ej}}</el-breadcrumb-item>
+                <el-breadcrumb-item :to="{ path: '/zy' }">{{title.title}}</el-breadcrumb-item>
             </el-breadcrumb>
         </el-card>
     </div>
@@ -15,9 +13,9 @@
 export default {
     props: {
         item: Boolean
-    },data() {
+    }, data() {
         return {
-            title:{}
+            title: {}
         }
     },
     methods: {
@@ -31,13 +29,13 @@ export default {
                 console.log(val, '123123123');
                 this.title = val.meta
             },
-            immediate:true
+            immediate: true
         }
     }
 }
 </script>
 <style lang="scss">
-.el-card__body{
+.el-card__body {
     display: flex;
 }
 </style>
