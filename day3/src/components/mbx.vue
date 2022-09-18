@@ -13,10 +13,11 @@
 <script>
 export default {
     props: {
-        add: Boolean
+        
     }, data() {
         return {
-            title: {}
+            title: {},
+            add:false
         }
     },
     methods: {
