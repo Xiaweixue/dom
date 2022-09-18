@@ -1,10 +1,11 @@
 <template>
     <div>
         <el-card class="box-card">
-            <i :class="item?'el-icon-s-unfold':'el-icon-s-fold'" @click="dj"></i>
+            <i :class="add?'el-icon-s-unfold':'el-icon-s-fold'" @click="dj"></i>
             <el-breadcrumb separator="/">
-                <el-breadcrumb-item>{{title.ej}}</el-breadcrumb-item>
-                <el-breadcrumb-item :to="{ path: '/zy' }">{{title.title}}</el-breadcrumb-item>
+                <el-breadcrumb-item :to="{ path: '' }">{{title.ej}}</el-breadcrumb-item>
+                <el-breadcrumb-item>{{title.title}}</el-breadcrumb-item>
+               
             </el-breadcrumb>
         </el-card>
     </div>
@@ -12,7 +13,7 @@
 <script>
 export default {
     props: {
-        item: Boolean
+        add: Boolean
     }, data() {
         return {
             title: {}
@@ -20,13 +21,13 @@ export default {
     },
     methods: {
         dj() {
-            this.item = !this.item
-            this.$emit('dj', this.item)
+            this.add = !this.add
+            this.$emit('dj', this.add)
         }
     }, watch: {
         $route: {
             handler(val) {
-                console.log(val, '123123123');
+                // console.log(val, '123123123');
                 this.title = val.meta
             },
             immediate: true

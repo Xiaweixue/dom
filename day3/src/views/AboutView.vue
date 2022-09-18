@@ -25,7 +25,7 @@
 
       </el-aside>
       <el-main>
-        <mbx :item="isCollapse" @dj="dj"></mbx>
+        <mbx :add="isCollapse" @dj="dj"></mbx>
         <router-view></router-view>
       </el-main>
     </el-container>
